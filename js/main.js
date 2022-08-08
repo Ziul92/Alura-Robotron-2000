@@ -1,7 +1,9 @@
 import {pecas} from "./estatisticas.js";
+import {cores} from "./cores.js"
 
 const controle = document.querySelectorAll("[data-controle]")
 const estatisticas = document.querySelectorAll("[data-estatisticas]")
+const imagem = document.querySelector("[data-imagem]")
 
 controle.forEach( (elemento) => {
    elemento.addEventListener("click", (evento) => {
@@ -30,3 +32,14 @@ function atualizaEstatisticas(operacao, peca) {
       })
    }
 }
+
+let i = 0
+imagem.addEventListener("click", () => {
+   if(i < cores.length) {
+      imagem.src = `img/Robotron 2000 - ${cores[i]}.png`
+      i++
+   } else {
+      i = 0
+   }
+})
+

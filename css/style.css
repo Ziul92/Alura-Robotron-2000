@@ -29,6 +29,9 @@ main {
     gap: 1vw;
 }
 
+h1 {
+}
+
 .robotron {
     background: url(../img/estrutura.png) no-repeat;
     background-position: center center;
